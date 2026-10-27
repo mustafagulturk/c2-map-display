@@ -1,0 +1,14 @@
+Vector data used by io.github.mustafagulturk.c2map.tools.DemoTileGenerator to render offline demo tiles.
+
+countries-10m.topo.json.gz
+    Natural Earth 1:10m admin-0 countries and land (public domain, https://www.naturalearthdata.com/),
+    as TopoJSON from the npm package world-atlas@2.0.2 (ISC licence, Mike Bostock). Gzipped, unmodified.
+
+lakes-rivers-50m.topo.json.gz
+    Natural Earth 1:50m lakes and rivers (public domain), taken from the npm package sane-topojson@4.0.0
+    (MIT licence, world_50m.json). Only the "lakes" and "rivers" objects and their arcs were kept.
+
+cities15000.tsv.gz
+    Populated places with at least 15 000 inhabitants from GeoNames (cities1000 dump via the npm package
+    cities-with-1000@1.0.4). GeoNames data is licensed CC BY (https://www.geonames.org/).
+    Columns: name, latitude, longitude, population, GeoNames feature code. Sorted by population, descending.
