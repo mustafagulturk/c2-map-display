@@ -148,10 +148,11 @@ class RecordReplayTest {
         List<Received> items = out.items();
         double wallMs = (items.get(8).nanos() - items.get(0).nanos()) / 1e6;
         assertEquals(400, wallMs, 120, "800 ms of data at 2x");
-        // Individual gaps of 50 ms.
+        // Datagram i is due 50 ms * i after the first. The player schedules against absolute
+        // times, so a late wake-up is caught up on the next datagram rather than accumulating.
         for (int i = 1; i < items.size(); i++) {
-            double gap = (items.get(i).nanos() - items.get(i - 1).nanos()) / 1e6;
-            assertTrue(gap > 30 && gap < 120, "gap " + i + " = " + gap);
+            double at = (items.get(i).nanos() - items.get(0).nanos()) / 1e6;
+            assertEquals(50.0 * i, at, 80, "datagram " + i);
         }
     }
 
