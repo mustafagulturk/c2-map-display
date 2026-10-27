@@ -8,3 +8,4 @@ out/
 !src/test/resources/**/*.kkr
 /tiles/
 /recordings/
+.claude/
