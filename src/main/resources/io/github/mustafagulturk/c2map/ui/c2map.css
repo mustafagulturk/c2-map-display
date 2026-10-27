@@ -1,0 +1,39 @@
+/* Dark operator console theme. */
+.root {
+    -fx-base: #1b2a33;
+    -fx-background: #101c23;
+    -fx-control-inner-background: #14232c;
+    -fx-accent: #2f8fb0;
+    -fx-focus-color: #3fb0d8;
+    -fx-font-family: "Segoe UI", "DejaVu Sans", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #d6e2e8;
+}
+.root-pane { -fx-background-color: #0b151b; }
+.tool-bar { -fx-background-color: #13222b; -fx-border-color: #22343f; -fx-border-width: 0 0 1 0; -fx-padding: 6 8; }
+.toggle-button:selected { -fx-base: #2f8fb0; }
+.record-button:selected { -fx-base: #b03030; }
+.side { -fx-background-color: #0e1a21; -fx-border-color: #22343f; -fx-border-width: 0 0 0 1; }
+.panel { -fx-background-color: #13222b; -fx-background-radius: 6; -fx-border-color: #22343f; -fx-border-radius: 6; }
+.panel-title { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #e8f1f5; }
+.muted { -fx-text-fill: #8aa1ad; }
+.value { -fx-text-fill: #e8f1f5; -fx-font-family: "DejaVu Sans Mono", "Consolas", monospace; }
+.mono { -fx-font-family: "DejaVu Sans Mono", "Consolas", monospace; -fx-text-fill: #9fb6c2; -fx-font-size: 12px; }
+.id-FRIEND { -fx-text-fill: #4fc3f7; -fx-font-weight: bold; }
+.id-HOSTILE { -fx-text-fill: #ff5252; -fx-font-weight: bold; }
+.id-UNKNOWN { -fx-text-fill: #ffd740; -fx-font-weight: bold; }
+.alarm-text { -fx-text-fill: #ff5252; -fx-font-weight: bold; }
+.btn-friend { -fx-base: #1d5a75; }
+.btn-hostile { -fx-base: #7a2323; }
+.btn-unknown { -fx-base: #6e5a12; }
+.status-bar { -fx-background-color: #13222b; -fx-padding: 4 10; -fx-border-color: #22343f; -fx-border-width: 1 0 0 0; }
+.mode-label { -fx-text-fill: #ffd740; }
+.alarm-box { -fx-background-color: rgba(150, 20, 20, 0.92); -fx-background-radius: 6; -fx-padding: 8 12;
+             -fx-effect: dropshadow(gaussian, rgba(255, 60, 60, 0.6), 14, 0.3, 0, 0); }
+.alarm-banner { -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; }
+.list-view { -fx-background-color: #0e1a21; -fx-border-color: transparent; }
+.list-cell { -fx-background-color: transparent; -fx-text-fill: #c9d6dc; -fx-padding: 4 6;
+             -fx-font-size: 12px; -fx-border-color: #1c2d37; -fx-border-width: 0 0 1 0; }
+.list-cell:selected { -fx-background-color: #1f3a48; }
+.list-cell.ev-WARNING { -fx-text-fill: #ffd740; }
+.list-cell.ev-ALARM { -fx-text-fill: #ff6b6b; -fx-font-weight: bold; }

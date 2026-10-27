@@ -28,7 +28,7 @@ dependencies {
 }
 
 application {
-    mainClass = "io.github.mustafagulturk.c2map.ui.C2MapApp"
+    mainClass = "io.github.mustafagulturk.c2map.Main"
     applicationDefaultJvmArgs = listOf("-Dprism.vsync=false")
 }
 
@@ -62,3 +62,5 @@ registerTool("tileGenerator", "io.github.mustafagulturk.c2map.tools.DemoTileGene
     "Renders offline demo tiles from bundled vector data.")
 registerTool("tileDownloader", "io.github.mustafagulturk.c2map.tools.TileDownloader",
     "Downloads a small OSM tile area for offline use (respects the tile usage policy).")
+registerTool("ingestBenchmark", "io.github.mustafagulturk.c2map.tools.IngestBenchmark",
+    "Times decode + tracking + zone checks per datagram (no UI, no network).")
