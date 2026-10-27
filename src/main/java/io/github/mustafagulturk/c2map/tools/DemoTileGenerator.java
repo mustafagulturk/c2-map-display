@@ -124,6 +124,9 @@ public final class DemoTileGenerator {
     private final List<City> cities = new ArrayList<>();
     private final Map<Integer, List<Label>> labels = new HashMap<>();
 
+    /** Credit line shown on the map for these tiles (read back by the app from the tile directory). */
+    static final String ATTRIBUTION = "Demo karolar: Natural Earth, GeoNames (CC BY)";
+
     public static void main(String[] args) throws IOException {
         System.setProperty("java.awt.headless", "true");
         TileArgs a;
@@ -148,6 +151,8 @@ public final class DemoTileGenerator {
         gen.loadData();
         List<TileKey> keys = tileList(bbox, zoom[0], zoom[1]);
         int[] counts = gen.renderAll(keys, out, a.flag("--force"));
+        Files.createDirectories(out);
+        Files.writeString(out.resolve(TileStore.ATTRIBUTION_FILE), ATTRIBUTION + "\n");
         System.out.printf(Locale.ROOT, "%d tiles written, %d already present (of %d) in %s, %.1f s%n",
                 counts[0], counts[1], keys.size(), out.toAbsolutePath(), (System.nanoTime() - t0) / 1e9);
     }

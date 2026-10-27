@@ -20,6 +20,10 @@ import javafx.scene.image.Image;
  */
 public final class TileStore implements AutoCloseable {
 
+    /** Optional one-line file in the tile root holding the credit line for those tiles. */
+    public static final String ATTRIBUTION_FILE = "ATTRIBUTION.txt";
+
+
     /** System property overriding the default tile directory. */
     public static final String DIR_PROPERTY = "c2map.tiles";
 
